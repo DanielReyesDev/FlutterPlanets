@@ -46,6 +46,16 @@ class PlanetRow extends StatelessWidget {
         ),
       );
 
+      Widget _planetValue({String value, String image}){
+        return new Row(
+          children: <Widget>[
+            new Image.asset(image,height: 12.0),
+            new Container(width: 8.0,),
+            new Text(planet.gravity,style: regularTextStyle,)
+          ],
+        );
+      }
+
       final planetCardContent = new Container(
         margin: new EdgeInsets.fromLTRB(76.0, 16.0, 16.0, 16.0),
         constraints: new BoxConstraints.expand(),
@@ -70,23 +80,16 @@ class PlanetRow extends StatelessWidget {
             new Row(
               children: <Widget>[
                 new Expanded(
-                  child: new Row(
-                    children: <Widget>[
-                      new Image.asset("assets/img/ic_distance.png", height: 12.0),
-                      new Container(width: 8.0),
-                      new Text(planet.distance, style: regularTextStyle,),
-                    ],
-                  ),
+                  child: _planetValue(
+                    value: planet.distance,
+                    image: 'assets/img/ic_distance.png'
+                  )
                 ),
                 new Expanded(
-                  child: new Row(
-                    children: <Widget>[
-                      new Container(width: 24.0),
-                      new Image.asset("assets/img/ic_gravity.png", height: 12.0),
-                      new Container(width: 8.0),
-                      new Text(planet.gravity, style: regularTextStyle,),
-                    ],
-                  ),
+                  child: _planetValue(
+                    value: planet.gravity,
+                    image: 'assets/img/ic_gravity.png'
+                  )
                 ),
                 
 
