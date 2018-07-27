@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_planets/ui/home/GradientAppBar.dart';
-import 'package:flutter_planets/ui/home/HomePageBody.dart';
+import 'package:flutter_planets/ui/common/gradient_app_bar.dart';
+import 'package:flutter_planets/ui/home/home_page_body.dart';
 import 'package:flutter_planets/models/Planet.dart';
 
 
